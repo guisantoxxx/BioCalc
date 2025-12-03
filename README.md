@@ -15,6 +15,8 @@ npm run dev
 npm run build
 ```
 
+Depois basta acessar http://localhost:5173
+
 ## 📊 Funcionalidades
 
 - ✅ Cálculo de 4 fases do ciclo de vida
