@@ -783,16 +783,16 @@ export default function BioCalcCompleto() {
               </div>
             </div>
 
-            {/* Gráfico Visual Simplificado */}
+{/* Gráfico Visual Simplificado */}
             <div className="bg-white rounded-xl shadow-xl p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">Distribuição das Emissões</h3>
               <div className="space-y-3">
                 {[
-                  { label: 'Agrícola + MUT', value: results.agricola, color: 'blue' },
-                  { label: 'Transporte Biomassa', value: results.transporte_biomassa, color: 'purple' },
-                  { label: 'Industrial', value: results.industrial, color: 'orange' },
-                  { label: 'Distribuição', value: results.distribuicao, color: 'pink' },
-                  { label: 'Uso Final', value: results.uso, color: 'indigo' }
+                  { label: 'Agrícola + MUT', value: results.agricola, colorClass: 'bg-blue-500' },
+                  { label: 'Transporte Biomassa', value: results.transporte_biomassa, colorClass: 'bg-purple-500' },
+                  { label: 'Industrial', value: results.industrial, colorClass: 'bg-orange-500' },
+                  { label: 'Distribuição', value: results.distribuicao, colorClass: 'bg-pink-500' },
+                  { label: 'Uso Final', value: results.uso, colorClass: 'bg-indigo-500' }
                 ].map(item => {
                   const percentage = (item.value / results.total) * 100;
                   return (
@@ -805,7 +805,7 @@ export default function BioCalcCompleto() {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3">
                         <div
-                          className={`bg-${item.color}-500 h-3 rounded-full transition-all duration-500`}
+                          className={`${item.colorClass} h-3 rounded-full transition-all duration-500`}
                           style={{ width: `${percentage}%` }}
                         ></div>
                       </div>
